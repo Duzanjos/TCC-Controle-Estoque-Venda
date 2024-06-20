@@ -11,6 +11,7 @@ Planejamento para versão: **v0.1.0.1**
 
 Bugs para correção **v0.1.0.1**:
 * Quando a quantidade do produto chegar a zero, não aparecer mais em "Produtos próximos da data de validade"
+* Quando cadastrar um usuário ja existe, ele informa que foi cadastrado, mesmo não cadastrando. (Adicionar validação).
   
 ---
 Planejamentos futuros:
