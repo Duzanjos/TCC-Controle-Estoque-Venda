@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="402.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.AvisoValidadeController">
+   <children>
+      <VBox layoutX="3.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="396.0">
+         <children>
+            <Label text="Produtos próximos da data de validade" textFill="WHITE" translateX="40.0">
+               <font>
+                  <Font name="Tahoma Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="395.0" style="-fx-background-color: #1a1a1a;">
+               <columns>
+                  <TableColumn fx:id="codigoBarrasColumn" prefWidth="112.0" text="Código de Barras" />
+                  <TableColumn fx:id="nomeColumn" prefWidth="81.0" text="Nome" />
+                  <TableColumn fx:id="dataValidadeColumn" prefWidth="105.0" text="Data de Validade" />
+                  <TableColumn fx:id="loteColumn" prefWidth="96.0" text="Lote" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

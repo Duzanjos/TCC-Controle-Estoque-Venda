@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="391.0" maxWidth="778.0" minHeight="391.0" minWidth="778.0" prefHeight="391.0" prefWidth="778.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.RelatorioEstoqueController">
+
+	<TableView fx:id="tableView" layoutX="3.0" layoutY="3.0" maxHeight="385.0" maxWidth="772.0" minHeight="385.0" minWidth="772.0" prefHeight="385.0" prefWidth="772.0" style="-fx-background-color: #1a1a1a;">
+		<columns>
+			<TableColumn fx:id="codigoBarrasColumn" prefWidth="110.0" text="Código de Barras" />
+			<TableColumn fx:id="nomeColumn" prefWidth="110.0" text="Nome" />
+			<TableColumn fx:id="descricaoColumn" prefWidth="200.0" text="Descrição" />
+			<TableColumn fx:id="quantidadeColumn" prefWidth="50.0" text="Qtd" />
+			<TableColumn fx:id="dataValidadeColumn" prefWidth="100.0" text="Data Validade" />
+			<TableColumn fx:id="valorProdutoColumn" prefWidth="100.0" text="Valor Produto" />
+			<TableColumn fx:id="loteColumn" prefWidth="100.0" text="Lote" />
+		</columns>
+	</TableView>
+</AnchorPane>

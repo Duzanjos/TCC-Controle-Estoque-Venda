@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="335.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.CadastroUsuarioController">
+    <AnchorPane layoutX="4.0" layoutY="4.0" maxHeight="317.0" maxWidth="328.0" minHeight="317.0" minWidth="328.0" prefHeight="317.0" prefWidth="328.0" style="-fx-background-color: #1a1a1a;">
+        <Text disable="true" fill="WHITE" layoutX="61.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro Usuário">
+            <font>
+                <Font name="Tahoma Bold" size="24.0" />
+            </font>
+        </Text>
+        <AnchorPane disable="true" layoutX="89.0" layoutY="42.0" prefHeight="6.0" prefWidth="150.0" style="-fx-background-color: #901cda;" />
+        <Text disable="true" fill="WHITE" layoutX="10.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text disable="true" fill="WHITE" layoutX="10.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text disable="true" fill="WHITE" layoutX="10.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repita sua senha:">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Text>
+       <Text disable="true" fill="WHITE" layoutX="10.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Usuário:">
+           <font>
+             <Font name="Tahoma Bold" size="14.0" />
+           </font>
+       </Text>
+        
+    </AnchorPane>
+    <TextField fx:id="cadastroLoginField" layoutX="168.0" layoutY="77.0" prefHeight="30.0" prefWidth="152.0" promptText="Crie seu Login" style="-fx-background-color: #fff5f2; -fx-background-radius: 3;">
+        <font>
+          <Font name="Tahoma Bold" size="14.0" />
+        </font>
+    </TextField>
+    <PasswordField fx:id="cadastroPasswordField" layoutX="168.0" layoutY="109.0" prefHeight="30.0" prefWidth="152.0" promptText="Crie sua Senha" style="-fx-background-color: #fff5f2; -fx-background-radius: 3;">
+        <font>
+          <Font name="Tahoma Bold" size="14.0" />
+        </font>
+    </PasswordField>
+    <PasswordField fx:id="cadastroPassword2Field" layoutX="168.0" layoutY="141.0" prefHeight="30.0" prefWidth="152.0" promptText="Repita sua Senha" style="-fx-background-color: #fff5f2; -fx-background-radius: 3;">
+        <font>
+          <Font name="Tahoma Bold" size="14.0" />
+        </font>
+    </PasswordField>
+     <ChoiceBox fx:id="tipoUsuarioChoiceBox" layoutX="168.0" layoutY="173.0" onMouseClicked="#getTipoUsuario" prefWidth="152.0" style="-fx-background-color: #fff5f2;" />
+    <Button fx:id="cadastrarUsuarioButton" layoutX="236.0" layoutY="214.0" maxHeight="34.0" maxWidth="90.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCadastrarButtonAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Cadastrar" textFill="WHITE">
+        <font>
+          <Font name="Tahoma Bold" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="limparUsuarioButton" layoutX="122.0" layoutY="214.0" maxHeight="34.0" maxWidth="90.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLimparButtonAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Limpar" textFill="WHITE">
+        <font>
+          <Font name="Tahoma Bold" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="cancelarUsuarioButton" layoutX="10.0" layoutY="214.0" maxHeight="34.0" maxWidth="90.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleCancelarButtonAction" prefHeight="34.0" prefWidth="90.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Sair" textFill="WHITE">
+        <font>
+          <Font name="Tahoma Bold" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="deletarUsuarioButton" layoutX="122.0" layoutY="283.0" maxHeight="21.0" maxWidth="90.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDeletarUsuarioButtonAction" prefHeight="21.0" prefWidth="90.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30; -fx-font-size: 10;" text="Deletar Usuário" textFill="WHITE">
+        <font>
+          <Font name="Tahoma Bold" size="20.0" />
+        </font>
+    </Button>
+</AnchorPane>
