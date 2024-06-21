@@ -31,6 +31,7 @@ public class MenuController{
             Stage stage = new Stage();
             stage.setTitle("Cadastro de Usuário");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e){
             LOGGER.log(Level.SEVERE, "Erro ao consultar produtos", e);
@@ -44,6 +45,7 @@ public class MenuController{
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Cadastro de Produto");
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e){
             LOGGER.log(Level.SEVERE, "Erro ao consultar produtos", e);
@@ -59,6 +61,7 @@ public class MenuController{
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Registro de Venda");
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e){
             LOGGER.log(Level.SEVERE, "Erro ao consultar produtos", e);

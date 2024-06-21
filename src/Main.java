@@ -18,6 +18,7 @@ public class Main extends Application{
             Scene scene = new Scene(root);
             primaryStage.setTitle("Estoque e Vendas - Login");
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception e){
             LOGGER.log(Level.SEVERE, "Erro ao carregar o FXML", e);
