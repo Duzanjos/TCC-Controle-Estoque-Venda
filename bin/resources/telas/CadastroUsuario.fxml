@@ -68,7 +68,7 @@
           <Font name="Tahoma Bold" size="24.0" />
         </font>
     </Button>
-    <Button fx:id="deletarUsuarioButton" layoutX="146.4" layoutY="320.4" maxHeight="25.2" maxWidth="108.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDeletarUsuarioButtonAction" prefHeight="25.2" prefWidth="113.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30; -fx-font-size: 12;" text="Deletar Usuário" textFill="WHITE">
+    <Button fx:id="deletarUsuarioButton" layoutX="146.4" layoutY="339.6" maxHeight="25.2" maxWidth="108.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleDeletarUsuarioButtonAction" prefHeight="25.2" prefWidth="113.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30; -fx-font-size: 12;" text="Deletar Usuário" textFill="WHITE">
         <font>
           <Font name="Tahoma Bold" size="12.0" />
         </font>
