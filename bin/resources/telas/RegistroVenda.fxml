@@ -1,62 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="335.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.RegistroVendaController">
-	<AnchorPane layoutX="4.0" layoutY="4.0" maxHeight="317.0" maxWidth="328.0" minHeight="317.0" minWidth="328.0" prefHeight="317.0" prefWidth="328.0" style="-fx-background-color: #1a1a1a;">
-		<Text disable="true" fill="WHITE" layoutX="73.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela de Vendas">
+<AnchorPane maxHeight="390.0" maxWidth="402.0" minHeight="390.0" minWidth="402.0" prefHeight="390.0" prefWidth="402.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.RegistroVendaController">
+	<AnchorPane layoutX="4.8" layoutY="4.8" maxHeight="380.4" maxWidth="393.6" minHeight="380.4" minWidth="393.6" prefHeight="380.4" prefWidth="393.6" style="-fx-background-color: #1a1a1a;">
+		<Text disable="true" fill="WHITE" layoutX="87.6" layoutY="64.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela de Vendas">
 			<font>
-				<Font name="Tahoma Bold" size="24.0" />
+				<Font name="Tahoma Bold" size="28.8" />
 			</font>
 		</Text>
-		<AnchorPane disable="true" layoutX="89.0" layoutY="62.0" prefHeight="6.0" prefWidth="150.0" style="-fx-background-color: #901cda;" />
-		<TextField fx:id="codigoBarrasTextField" layoutX="147.0" layoutY="87.0" prefHeight="25.0" prefWidth="166.0" promptText="Codigo de Barras" />
-		<TextField fx:id="precoTextField" editable="false" layoutX="147.0" layoutY="153.0" prefHeight="25.0" prefWidth="166.0" promptText="R$ " />
-		<Text disable="true" fill="WHITE" layoutX="10.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de barras:">
+		<AnchorPane disable="true" layoutX="106.8" layoutY="74.4" prefHeight="7.2" prefWidth="180.0" style="-fx-background-color: #901cda;" />
+		<TextField fx:id="codigoBarrasTextField" layoutX="166.4" layoutY="104.4" prefHeight="30.0" prefWidth="199.2" promptText="Codigo de Barras" />
+		<TextField fx:id="precoTextField" editable="false" layoutX="166.4" layoutY="183.6" prefHeight="30.0" prefWidth="199.2" promptText="R$ " />
+		<Text disable="true" fill="WHITE" layoutX="12.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código de barras:">
 			<font>
-				<Font name="Tahoma Bold" size="14.0" />
+				<Font name="Tahoma Bold" size="16.8" />
 			</font>
 		</Text>
-		<Text disable="true" fill="WHITE" layoutX="10.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço:">
+		<Text disable="true" fill="WHITE" layoutX="12.0" layoutY="203.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço:">
 			<font>
-				<Font name="Tahoma Bold" size="14.0" />
+				<Font name="Tahoma Bold" size="16.8" />
 			</font>
 		</Text>
-		<TextField fx:id="valorTotalTextField" editable="false" layoutX="147.0" layoutY="220.0" prefHeight="25.0" prefWidth="166.0" promptText="R$" />
-		<Text disable="true" fill="WHITE" layoutX="10.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Total:">
+		<TextField fx:id="valorTotalTextField" editable="false" layoutX="166.4" layoutY="264.0" prefHeight="30.0" prefWidth="199.2" promptText="R$" />
+		<Text disable="true" fill="WHITE" layoutX="12.0" layoutY="285.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Total:">
 			<font>
-				<Font name="Tahoma Bold" size="14.0" />
+				<Font name="Tahoma Bold" size="16.8" />
 			</font>
 		</Text>
-		<Text disable="true" fill="WHITE" layoutX="10.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:">
+		<Text disable="true" fill="WHITE" layoutX="12.0" layoutY="243.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:">
 			<font>
-				<Font name="Tahoma Bold" size="14.0" />
+				<Font name="Tahoma Bold" size="16.8" />
 			</font>
 		</Text>
-		<Spinner fx:id="quantidadeSpinner" editable="true" layoutX="147.0" layoutY="186.0" prefHeight="25.0" prefWidth="53.0" />
-      <TextField fx:id="nomeProdutoField" layoutX="147.0" layoutY="120.0" prefHeight="25.0" prefWidth="166.0" promptText="Descrição" />
-      <Text disable="true" fill="WHITE" layoutX="10.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:">
-         <font>
-            <Font name="Tahoma Bold" size="14.0" />
-         </font>
-      </Text>
+		<Spinner fx:id="quantidadeSpinner" editable="true" layoutX="166.0" layoutY="223.0" prefHeight="30.0" prefWidth="104.0" />
+        <TextField fx:id="nomeProdutoField" layoutX="166.4" layoutY="144.0" prefHeight="30.0" prefWidth="199.2" promptText="Descrição" />
+        <Text disable="true" fill="WHITE" layoutX="12.0" layoutY="165.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:">
+            <font>
+                <Font name="Tahoma Bold" size="16.8" />
+            </font>
+        </Text>
 	</AnchorPane>
-	<Button fx:id="cancelarVendaButton" layoutX="14.0" layoutY="275.0" maxHeight="10.0" maxWidth="10.0" minHeight="34.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleCancelarButtonAction" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Cancelar" textFill="WHITE">
+	<Button fx:id="cancelarVendaButton" layoutX="16.8" layoutY="330.0" maxHeight="12.0" maxWidth="12.0" minHeight="40.8" minWidth="96.0" mnemonicParsing="false" onAction="#handleCancelarButtonAction" prefHeight="12.0" prefWidth="12.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 18;" text="Cancelar" textFill="WHITE">
 		<font>
-			<Font name="Tahoma Bold" size="20.0" />
+			<Font name="Tahoma Bold" size="24.0" />
 		</font>
 	</Button>
-	<Button fx:id="limparVendaButton" layoutX="126.0" layoutY="275.0" maxHeight="10.0" maxWidth="10.0" minHeight="34.0" minWidth="80.0" mnemonicParsing="false" onAction="#handleLimparButtonAction" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Limpar" textFill="WHITE">
+	<Button fx:id="limparVendaButton" layoutX="151.2" layoutY="330.0" maxHeight="12.0" maxWidth="12.0" minHeight="40.8" minWidth="96.0" mnemonicParsing="false" onAction="#handleLimparButtonAction" prefHeight="12.0" prefWidth="12.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 18;" text="Limpar" textFill="WHITE">
 		<font>
-			<Font name="Tahoma Bold" size="20.0" />
+			<Font name="Tahoma Bold" size="24.0" />
 		</font>
 	</Button>
-	<Button fx:id="comprarVendaButton" layoutX="235.0" layoutY="275.0" maxHeight="10.0" maxWidth="10.0" minHeight="34.0" minWidth="87.0" mnemonicParsing="false" onAction="#handleCadastrarButtonAction" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 15;" text="Comprar" textFill="WHITE">
+	<Button fx:id="comprarVendaButton" layoutX="282.0" layoutY="330.0" maxHeight="12.0" maxWidth="12.0" minHeight="40.8" minWidth="104.4" mnemonicParsing="false" onAction="#handleCadastrarButtonAction" prefHeight="12.0" prefWidth="12.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 18;" text="Comprar" textFill="WHITE">
 		<font>
-			<Font name="Tahoma Bold" size="20.0" />
+			<Font name="Tahoma Bold" size="24.0" />
 		</font>
 	</Button>
-
 </AnchorPane>

@@ -1,46 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="335.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.MenuController">
-    <AnchorPane maxHeight="317.0" maxWidth="328.0" minHeight="317.0" minWidth="328.0" prefHeight="317.0" prefWidth="328.0" style="-fx-background-color: #1a1a1a;">
-        <Button fx:id="cadastrarUsuarioButton" layoutX="66.0" layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleCadastrarUsuario" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Cadastrar Usuário" textFill="WHITE">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="402.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.MenuController">
+    <AnchorPane maxHeight="380.4" maxWidth="393.6" minHeight="380.4" minWidth="393.6" prefHeight="380.4" prefWidth="393.6" style="-fx-background-color: #1a1a1a;">
+        <Button fx:id="cadastrarUsuarioButton" layoutX="79.2" layoutY="127.2" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleCadastrarUsuario" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Cadastrar Usuário" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Button fx:id="cadastrarProdutoButton" layoutX="66.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleCadastrarProduto" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Cadastrar Produto" textFill="WHITE">
+        <Button fx:id="cadastrarProdutoButton" layoutX="79.2" layoutY="165.6" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleCadastrarProduto" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Cadastrar Produto" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Button fx:id="registrarVendaButton" layoutX="66.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRegistrarVenda" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Registrar Venda" textFill="WHITE">
+        <Button fx:id="registrarVendaButton" layoutX="79.2" layoutY="204.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRegistrarVenda" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Registrar Venda" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Button fx:id="relatorioEstoqueButton" layoutX="66.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRelatorioEstoque" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Relatório de Estoque" textFill="WHITE">
+        <Button fx:id="relatorioEstoqueButton" layoutX="79.2" layoutY="242.4" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRelatorioEstoque" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Relatório de Estoque" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Button fx:id="relatorioComprasButton" layoutX="66.0" layoutY="234.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRelatorioCompras" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Relatório de Compras" textFill="WHITE">
+        <Button fx:id="relatorioComprasButton" layoutX="79.2" layoutY="280.8" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleRelatorioCompras" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Relatório de Compras" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Button layoutX="66.0" layoutY="274.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleSair" prefHeight="29.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Sair" textFill="WHITE">
+        <Button layoutX="79.2" layoutY="328.8" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleSair" prefHeight="34.8" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30;" text="Sair" textFill="WHITE">
           <font>
-              <Font name="Tahoma Bold" size="14.0" />
+              <Font name="Tahoma Bold" size="16.8" />
           </font>
         </Button>
-        <Text disable="true" fill="WHITE" layoutX="79.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+        <Text disable="true" fill="WHITE" layoutX="94.8" layoutY="69.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
            <font>
-               <Font name="Tahoma Bold" size="24.0" />
+               <Font name="Tahoma Bold" size="28.8" />
            </font>
         </Text>
-		<AnchorPane disable="true" layoutX="89.0" layoutY="69.0" prefHeight="6.0" prefWidth="150.0" style="-fx-background-color: #901cda;" />
+		<AnchorPane disable="true" layoutX="106.8" layoutY="82.8" prefHeight="7.2" prefWidth="180.0" style="-fx-background-color: #901cda;" />
     </AnchorPane>
 </VBox>

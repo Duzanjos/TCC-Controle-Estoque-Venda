@@ -7,27 +7,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="325.0" maxWidth="335.0" minHeight="325.0" minWidth="335.0" prefHeight="325.0" prefWidth="335.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.LoginController">
-    <AnchorPane layoutX="4.0" layoutY="4.0" maxHeight="317.0" maxWidth="328.0" minHeight="317.0" minWidth="328.0" prefHeight="317.0" prefWidth="328.0" style="-fx-background-color: #1a1a1a;">
-        <Text disable="true" fill="WHITE" layoutX="58.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estoque e Vendas">
+<AnchorPane maxHeight="390.0" maxWidth="402.0" minHeight="390.0" minWidth="402.0" prefHeight="390.0" prefWidth="402.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.LoginController">
+    <AnchorPane layoutX="4.8" layoutY="4.8" maxHeight="380.4" maxWidth="393.6" minHeight="380.4" minWidth="393.6" prefHeight="380.4" prefWidth="393.6" style="-fx-background-color: #1a1a1a;">
+        <Text disable="true" fill="WHITE" layoutX="69.6" layoutY="70.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Estoque e Vendas">
             <font>
-                <Font name="Tahoma Bold" size="24.0" />
+                <Font name="Tahoma Bold" size="28.8" />
             </font>
         </Text>
-        <AnchorPane disable="true" layoutX="74.0" layoutY="73.0" prefHeight="6.0" prefWidth="180.0" style="-fx-background-color: #901cda;" />
-        <TextField fx:id="loginField" layoutX="88.0" layoutY="117.0" prefHeight="30.0" prefWidth="152.0" promptText="Usuário" style="-fx-background-color: #fff5f2;">
+        <AnchorPane disable="true" layoutX="88.8" layoutY="87.6" prefHeight="7.2" prefWidth="216.0" style="-fx-background-color: #901cda;" />
+        <TextField fx:id="loginField" layoutX="105.6" layoutY="140.4" prefHeight="36.0" prefWidth="182.4" promptText="Usuário" style="-fx-background-color: #fff5f2;">
             <font>
-                <Font name="Tahoma Bold" size="14.0" />
+                <Font name="Tahoma Bold" size="16.8" />
             </font>
         </TextField>
-        <PasswordField fx:id="passwordField" layoutX="88.0" layoutY="166.0" prefHeight="30.0" prefWidth="152.0" promptText="Senha" style="-fx-background-color: #fff5f2;">
+        <PasswordField fx:id="passwordField" layoutX="105.6" layoutY="199.2" prefHeight="36.0" prefWidth="182.4" promptText="Senha" style="-fx-background-color: #fff5f2;">
             <font>
-                <Font name="Tahoma Bold" size="14.0" />
+                <Font name="Tahoma Bold" size="16.8" />
             </font>
         </PasswordField>
-        <Button layoutX="68.0" layoutY="222.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="41.0" prefWidth="196.0" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 20;" text="Login" textFill="WHITE">
+        <Button layoutX="79.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="49.2" prefWidth="235.2" style="-fx-background-color: #901cda; -fx-background-radius: 30; -fx-font-size: 24;" text="Login" textFill="WHITE">
             <font>
-                <Font name="Tahoma Bold" size="36.0" />
+                <Font name="Tahoma Bold" size="43.2" />
             </font>
         </Button>
     </AnchorPane>
