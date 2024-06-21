@@ -47,11 +47,11 @@ public class RelatorioEstoqueController{
         ObservableList<Produto> produtos = gestaoCadastroProduto.consultarProdutos();
         tableView.setItems(produtos);
         List<Produto> produtosProximosDaValidade = produtos.stream()
-                .filter(produto -> produto.getDataValidade() != null && produto.getDataValidade().isAfter(LocalDate.now()) && produto.getDataValidade().isBefore(LocalDate.now().plusDays(30)))
+                .filter(produto -> produto.getQuantidade() > 0 && produto.getDataValidade() != null && produto.getDataValidade().isAfter(LocalDate.now()) && produto.getDataValidade().isBefore(LocalDate.now().plusDays(30)))
                 .collect(Collectors.toList());
         
         List<Produto> produtosVencidos = produtos.stream()
-                .filter(produto -> produto.getDataValidade() != null && produto.getDataValidade().isBefore(LocalDate.now()))
+                .filter(produto -> produto.getQuantidade() > 0 && produto.getDataValidade() != null && produto.getDataValidade().isBefore(LocalDate.now()))
                 .collect(Collectors.toList());
 
         if (!produtosProximosDaValidade.isEmpty()) {
