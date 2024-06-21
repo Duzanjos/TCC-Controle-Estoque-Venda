@@ -67,6 +67,7 @@ public class RegistroVendaController{
         quantidadeSpinner.valueProperty().addListener((obs, oldValue, newValue) -> atualizarValorTotal());
     }
     private Usuario usuarioLogado;
+    
     private Produto produtoAtual;
 
     public void setUsuarioLogado(Usuario usuario){
@@ -93,6 +94,7 @@ public class RegistroVendaController{
             atualizarValorTotal();
         }
     }
+    
     private void atualizarValorTotal(){
         if (produtoAtual != null){
             double precoUnitario = produtoAtual.getValorProduto();
@@ -101,6 +103,7 @@ public class RegistroVendaController{
             valorTotalTextField.setText(String.format("R$ %.2f", valorTotal));
         }
     }
+    
     private void limparCampos(){
         codigoBarrasTextField.clear();
         precoTextField.clear();
@@ -110,6 +113,7 @@ public class RegistroVendaController{
         produtoAtual = null;
         atualizarValorTotal();
     }
+    
     private void showAlert(Alert.AlertType type, String title, String message){
         Alert alert = new Alert(type);
         alert.setTitle(title);

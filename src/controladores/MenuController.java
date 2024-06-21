@@ -98,11 +98,12 @@ public class MenuController{
     }
     
     private Usuario usuarioLogado;
+    
     private String tipoUsuario;
 
     public void setUsuarioLogado(Usuario usuarioLogado){
         this.usuarioLogado = usuarioLogado;
-        if (usuarioLogado != null) {
+        if (usuarioLogado != null){
             setTipoUsuario(usuarioLogado.getTipoUsuario());
         }
     }
@@ -126,6 +127,4 @@ public class MenuController{
             relatorioComprasButton.setVisible(true);
         }
     }
-
-    
 }

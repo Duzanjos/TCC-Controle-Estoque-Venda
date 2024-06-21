@@ -26,12 +26,10 @@ public class CadastroUsuarioController implements Initializable{
     private ChoiceBox<String> tipoUsuarioChoiceBox;
     @FXML
     private Button deletarUsuarioButton;
-
     @FXML
-    void getTipoUsuario() {
+    void getTipoUsuario(){
         tipoUsuarioChoiceBox.getSelectionModel().getSelectedItem();
     }
-
     @FXML
     void handleCadastrarButtonAction(){
         String login = cadastroLoginField.getText();
@@ -49,13 +47,11 @@ public class CadastroUsuarioController implements Initializable{
         Database.insertUser(login, senha, tipoUsuario);
         showAlert("Sucesso", "Usuário cadastrado com sucesso!");
     }
-
     @FXML
     void handleCancelarButtonAction(){
         Stage stage = (Stage) cancelarUsuarioButton.getScene().getWindow();
         stage.close();
     }
-
     @FXML
     void handleLimparButtonAction(){
         cadastroLoginField.clear();
@@ -63,26 +59,24 @@ public class CadastroUsuarioController implements Initializable{
         cadastroPassword2Field.clear();
         tipoUsuarioChoiceBox.getSelectionModel().clearSelection();
     }
-
     @FXML
-    void handleDeletarUsuarioButtonAction() {
+    void handleDeletarUsuarioButtonAction(){
         String login = cadastroLoginField.getText();
-        if (login.isEmpty()) {
-            showAlert("Erro de Deleção", "O campo de login deve ser preenchido.");
+        if (login.isEmpty()){
+            showAlert("Erro ao deletar", "O campo de login deve ser preenchido.");
             return;
         }
-        if ("admin".equalsIgnoreCase(login)) {
-            showAlert("Erro de Deleção", "Não é possível deletar o usuário admin.");
+        if ("admin".equalsIgnoreCase(login)){
+            showAlert("Erro ao deletar", "Não é possível deletar o usuário admin.");
             return;
         }
-        if (!Database.userExists(login)) {
-            showAlert("Erro de Deleção", "Usuário não encontrado.");
+        if (!Database.userExists(login)){
+            showAlert("Erro ao deletar", "Usuário não encontrado.");
             return;
         }
         Database.deleteUser(login);
         showAlert("Sucesso", "Usuário deletado com sucesso!");
     }
-
     @Override
     public void initialize(URL location, ResourceBundle resources){
         tipoUsuarioChoiceBox.getItems().addAll("Admin", "Funcionario");

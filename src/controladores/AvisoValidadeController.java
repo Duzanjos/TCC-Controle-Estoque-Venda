@@ -11,7 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.time.LocalDate;
 import java.util.List;
 
-public class AvisoValidadeController {
+public class AvisoValidadeController{
     @FXML
     private TableView<Produto> tableView;
     @FXML
@@ -22,19 +22,18 @@ public class AvisoValidadeController {
     private TableColumn<Produto, LocalDate> dataValidadeColumn;
     @FXML
     private TableColumn<Produto, String> loteColumn;
-
-    private ObservableList<Produto> produtos = FXCollections.observableArrayList();
-
     @FXML
-    public void initialize() {
+    public void initialize(){
         codigoBarrasColumn.setCellValueFactory(new PropertyValueFactory<>("codigoBarras"));
         nomeColumn.setCellValueFactory(new PropertyValueFactory<>("nome"));
         dataValidadeColumn.setCellValueFactory(new PropertyValueFactory<>("dataValidade"));
         loteColumn.setCellValueFactory(new PropertyValueFactory<>("lote"));
         tableView.setItems(produtos);
     }
-
-    public void setProdutos(List<Produto> produtos) {
+    
+    private ObservableList<Produto> produtos = FXCollections.observableArrayList();
+    
+    public void setProdutos(List<Produto> produtos){
         this.produtos.setAll(produtos);
     }
 }

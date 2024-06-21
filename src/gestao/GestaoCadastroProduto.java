@@ -19,6 +19,7 @@ public class GestaoCadastroProduto{
         produtos.add(produto);
         salvarProdutoNoBanco(produto);
     }
+    
     private void salvarProdutoNoBanco(Produto produto){
         String sql = "INSERT INTO Produto (codigoBarras, nome, descricao, quantidade, dataValidade, valorProduto, lote) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (Connection conn = Database.connect(); PreparedStatement pstmt = conn.prepareStatement(sql)){

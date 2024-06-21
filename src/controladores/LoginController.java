@@ -38,6 +38,7 @@ public class LoginController{
     public LoginController() throws SQLException{
         auth = new GestaoAutenticacao();
     }
+    
     private void abrirMenuPrincipal(Usuario setTipoUsuario){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/Menu.fxml"));
@@ -47,7 +48,7 @@ public class LoginController{
             Stage stage = (Stage) loginField.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
-        } catch (Exception e) {
+        } catch (Exception e){
             showAlert(Alert.AlertType.ERROR, "Erro", "Ocorreu um erro ao cadastrar o produto.");
             LOGGER.log(Level.SEVERE, "Erro ao cadastrar produto", e);
         }

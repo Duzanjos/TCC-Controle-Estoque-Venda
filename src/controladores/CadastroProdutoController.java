@@ -37,7 +37,6 @@ public class CadastroProdutoController{
     public Button cadastrarButton;
     @FXML
     public Button deletarProdutoButton;
-
     @FXML
     private void handleCadastrarButtonAction(){
         try{
@@ -53,7 +52,6 @@ public class CadastroProdutoController{
             LOGGER.log(Level.SEVERE, "Erro ao cadastrar produto", e);
         }
     }
-
     @FXML
     private void handleLimparButtonAction(){
         nomeField.clear();
@@ -64,22 +62,20 @@ public class CadastroProdutoController{
         valorProdutoField.clear();
         loteField.clear();
     }
-
     @FXML
     private void handleCancelarButtonAction(){
         Stage stage = (Stage) cancelarButton.getScene().getWindow();
         stage.close();
     }
-
     @FXML
-    private void handleDeletarProdutoButtonAction() {
+    private void handleDeletarProdutoButtonAction(){
         String codigoBarras = codigoBarrasField.getText();
         if (codigoBarras.isEmpty()) {
-            showAlert(Alert.AlertType.ERROR, "Erro de Deleção", "O campo de código de barras deve ser preenchido.");
+            showAlert(Alert.AlertType.ERROR, "Erro ao deletar", "O campo de código de barras deve ser preenchido.");
             return;
         }
-        if (!Database.productExists(codigoBarras)) {
-            showAlert(Alert.AlertType.ERROR, "Erro de Deleção", "Produto não encontrado.");
+        if (!Database.productExists(codigoBarras)){
+            showAlert(Alert.AlertType.ERROR, "Erro ao deletar", "Produto não encontrado.");
             return;
         }
         Database.deleteProduct(codigoBarras);
@@ -87,6 +83,7 @@ public class CadastroProdutoController{
     }
 
     public static final Logger LOGGER = Logger.getLogger(CadastroProdutoController.class.getName());
+    
     private final GestaoCadastroProduto gestaoCadastroProduto;
 
     public CadastroProdutoController(){

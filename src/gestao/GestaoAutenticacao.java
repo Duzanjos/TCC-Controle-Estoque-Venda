@@ -15,6 +15,7 @@ public class GestaoAutenticacao{
         this.connection = Database.connect();
         carregarUsuarios();
     }
+    
     private void carregarUsuarios(){
         String sql = "SELECT login, senha, tipo_usuario FROM Usuario";
         try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(sql)){

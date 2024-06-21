@@ -13,13 +13,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RelatorioEstoqueController {
+public class RelatorioEstoqueController{
     @FXML
     private TableView<Produto> tableView;
     @FXML
@@ -36,10 +35,8 @@ public class RelatorioEstoqueController {
     private TableColumn<Produto, Double> valorProdutoColumn;
     @FXML
     private TableColumn<Produto, String> loteColumn;
-    private final GestaoCadastroProduto gestaoCadastroProduto = new GestaoCadastroProduto();
-
     @FXML
-    public void initialize() {
+    public void initialize(){
         codigoBarrasColumn.setCellValueFactory(new PropertyValueFactory<>("codigoBarras"));
         nomeColumn.setCellValueFactory(new PropertyValueFactory<>("nome"));
         descricaoColumn.setCellValueFactory(new PropertyValueFactory<>("descricao"));
@@ -49,15 +46,13 @@ public class RelatorioEstoqueController {
         loteColumn.setCellValueFactory(new PropertyValueFactory<>("lote"));
         ObservableList<Produto> produtos = gestaoCadastroProduto.consultarProdutos();
         tableView.setItems(produtos);
-
-        // Verificar validade dos produtos e exibir avisos
         List<Produto> produtosProximosDaValidade = produtos.stream()
                 .filter(produto -> produto.getDataValidade().isBefore(LocalDate.now().plusDays(30)))
                 .collect(Collectors.toList());
         
-        if (!produtosProximosDaValidade.isEmpty()) {
-            Platform.runLater(() -> {
-                try {
+        if (!produtosProximosDaValidade.isEmpty()){
+            Platform.runLater(() ->{
+                try{
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/AvisoValidade.fxml"));
                     Parent root = loader.load();
                     AvisoValidadeController controller = loader.getController();
@@ -65,15 +60,16 @@ public class RelatorioEstoqueController {
                     
                     Stage stage = new Stage();
                     stage.initModality(Modality.WINDOW_MODAL);
-                    stage.initOwner(tableView.getScene().getWindow());  // Define a janela de relatório como o dono da nova janela
+                    stage.initOwner(tableView.getScene().getWindow());
                     
                     stage.setScene(new Scene(root));
                     stage.setTitle("Aviso de Validade");
-                    stage.showAndWait();  // Mostra a janela e aguarda até que seja fechada
-                } catch (IOException e) {
+                    stage.showAndWait();
+                } catch (IOException e){
                     e.printStackTrace();
                 }
             });
         }
     }
+    private final GestaoCadastroProduto gestaoCadastroProduto = new GestaoCadastroProduto();
 }
