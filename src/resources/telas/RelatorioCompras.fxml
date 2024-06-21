@@ -4,16 +4,15 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="391.0" maxWidth="678.0" minHeight="391.0" minWidth="678.0" prefHeight="391.0" prefWidth="678.0" style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.RelatorioComprasController">
-	<TableView fx:id="tableView" layoutX="3.0" layoutY="3.0" maxHeight="385.0" maxWidth="672.0" minHeight="385.0" minWidth="672.0" prefHeight="385.0" prefWidth="672.0" style="-fx-background-color: #1a1a1a;">
-		<columns>
-			<TableColumn fx:id="codigoBarrasColumn" prefWidth="110.0" text="Código de Barras" />
-			<TableColumn fx:id="nomeColumn" prefWidth="110.0" text="Nome" />
-			<TableColumn fx:id="descricaoColumn" prefWidth="200.0" text="Descrição" />
-			<TableColumn fx:id="quantidadeColumn" prefWidth="50.0" text="Qtd" />
-			<TableColumn fx:id="dataCompraColumn" prefWidth="100.0" text="Data de Compra" />
-			<TableColumn fx:id="valorTotalColumn" prefWidth="100.0" text="Valor Total" />
-
-		</columns>
-	</TableView>
+<AnchorPane style="-fx-background-color: #901cda;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.RelatorioComprasController">
+    <TableView fx:id="tableView" style="-fx-background-color: #1a1a1a;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <columns>
+            <TableColumn fx:id="codigoBarrasColumn" prefWidth="110.0" text="Código de Barras" />
+            <TableColumn fx:id="nomeColumn" prefWidth="110.0" text="Nome" />
+            <TableColumn fx:id="descricaoColumn" prefWidth="200.0" text="Descrição" />
+            <TableColumn fx:id="quantidadeColumn" prefWidth="50.0" text="Qtd" />
+            <TableColumn fx:id="dataCompraColumn" prefWidth="100.0" text="Data de Compra" />
+            <TableColumn fx:id="valorTotalColumn" prefWidth="100.0" text="Valor Total" />
+        </columns>
+    </TableView>
 </AnchorPane>
