@@ -28,7 +28,7 @@ public class LoginController{
         if (usuarioLogado != null){
             showAlert(Alert.AlertType.INFORMATION, "Login Bem-sucedido", "Bem-vindo, " + usuarioLogado.getLogin() + "!");
             abrirMenuPrincipal(usuarioLogado);
-        } else {
+        } else{
             showAlert(Alert.AlertType.ERROR, "Login Falhou", "Login ou senha incorretos.");
         }
     }
@@ -40,7 +40,7 @@ public class LoginController{
     }
     
     private void abrirMenuPrincipal(Usuario setTipoUsuario){
-        try {
+        try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/Menu.fxml"));
             Parent root = loader.load();
             MenuController menuController = loader.getController();

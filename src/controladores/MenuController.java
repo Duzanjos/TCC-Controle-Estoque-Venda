@@ -117,7 +117,7 @@ public class MenuController{
     }
 
     private void ajustarMenu(){
-        if ("Funcionario".equals(tipoUsuario)) {
+        if ("Funcionario".equals(tipoUsuario)){
             cadastrarUsuarioButton.setVisible(false);
             cadastrarProdutoButton.setVisible(false);
             relatorioEstoqueButton.setVisible(false);

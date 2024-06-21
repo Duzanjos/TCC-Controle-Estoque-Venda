@@ -43,11 +43,11 @@ public class CadastroProdutoController{
             Produto produto = criarProduto();
             gestaoCadastroProduto.cadastrarProduto(produto);
             showAlert(Alert.AlertType.INFORMATION, "Cadastro Bem-sucedido", "Produto cadastrado com sucesso.");
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e){
             showAlert(Alert.AlertType.ERROR, "Erro de Formato", "Por favor, verifique os campos numéricos.");
-        } catch (DateTimeParseException e) {
+        } catch (DateTimeParseException e){
             showAlert(Alert.AlertType.ERROR, "Erro de Data", "Por favor, insira uma data válida no formato AAAA-MM-DD.");
-        } catch (Exception e) {
+        } catch (Exception e){
             showAlert(Alert.AlertType.ERROR, "Erro", "Ocorreu um erro ao cadastrar o produto.");
             LOGGER.log(Level.SEVERE, "Erro ao cadastrar produto", e);
         }
@@ -70,7 +70,7 @@ public class CadastroProdutoController{
     @FXML
     private void handleDeletarProdutoButtonAction(){
         String codigoBarras = codigoBarrasField.getText();
-        if (codigoBarras.isEmpty()) {
+        if (codigoBarras.isEmpty()){
             showAlert(Alert.AlertType.ERROR, "Erro ao deletar", "O campo de código de barras deve ser preenchido.");
             return;
         }

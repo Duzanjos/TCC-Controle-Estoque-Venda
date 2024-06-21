@@ -21,7 +21,7 @@ public class Venda{
     private void calcularValorTotal(){
         if (produto != null){
             this.valorTotal = produto.getValorProduto() * quantidade;
-        } else {
+        } else{
             this.valorTotal = 0;
         }
     }
