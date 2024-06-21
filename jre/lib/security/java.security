@@ -500,10 +500,10 @@ sun.security.krb5.maxReferrals=5
 # as revocation information such as CRLs and signed OCSP Responses.
 # The syntax of the disabled algorithm string is described as follows:
 #   DisabledAlgorithms:
-#       " DisabledAlgorithm { , DisabledAlgorithm } "
+#       " DisabledAlgorithm{ , DisabledAlgorithm } "
 #
 #   DisabledAlgorithm:
-#       AlgorithmName [Constraint] { '&' Constraint } | IncludeProperty
+#       AlgorithmName [Constraint]{ '&' Constraint } | IncludeProperty
 #
 #   AlgorithmName:
 #       (see below)
@@ -661,10 +661,10 @@ jdk.security.legacyAlgorithms=SHA1, \
 #
 # The syntax of the disabled algorithm string is described as follows:
 #   DisabledAlgorithms:
-#       " DisabledAlgorithm { , DisabledAlgorithm } "
+#       " DisabledAlgorithm{ , DisabledAlgorithm } "
 #
 #   DisabledAlgorithm:
-#       AlgorithmName [Constraint] { '&' Constraint }
+#       AlgorithmName [Constraint]{ '&' Constraint }
 #
 #   AlgorithmName:
 #       (see below)
@@ -744,7 +744,7 @@ jdk.tls.disabledAlgorithms=SSLv3, TLSv1, TLSv1.1, RC4, DES, MD5withRSA, \
 # The syntax of the legacy algorithms string is described as this Java
 # BNF-style:
 #   LegacyAlgorithms:
-#       " LegacyAlgorithm { , LegacyAlgorithm } "
+#       " LegacyAlgorithm{ , LegacyAlgorithm } "
 #
 #   LegacyAlgorithm:
 #       AlgorithmName (standard JSSE algorithm name)
@@ -796,7 +796,7 @@ jdk.tls.legacyAlgorithms= \
 #
 # The syntax of this property string is described as this Java BNF-style:
 #   DefaultDHEParameters:
-#       DefinedDHEParameters { , DefinedDHEParameters }
+#       DefinedDHEParameters{ , DefinedDHEParameters }
 #
 #   DefinedDHEParameters:
 #       "{" DHEPrimeModulus , DHEBaseGenerator "}"
@@ -808,7 +808,7 @@ jdk.tls.legacyAlgorithms= \
 #       HexadecimalDigits
 #
 #   HexadecimalDigits:
-#       HexadecimalDigit { HexadecimalDigit }
+#       HexadecimalDigit{ HexadecimalDigit }
 #
 #   HexadecimalDigit: one of
 #       0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f
@@ -834,7 +834,7 @@ jdk.tls.legacyAlgorithms= \
 #
 # Example:
 #   jdk.tls.server.defaultDHEParameters=
-#       { \
+#      { \
 #       FFFFFFFF FFFFFFFF C90FDAA2 2168C234 C4C6628B 80DC1CD1 \
 #       29024E08 8A67CC74 020BBEA6 3B139B22 514A0879 8E3404DD \
 #       EF9519B3 CD3A431B 302B0A6D F25F1437 4FE1356D 6D51C245 \
@@ -852,7 +852,7 @@ jdk.tls.legacyAlgorithms= \
 #
 # The syntax for the property is described below:
 #   KeyLimits:
-#       " KeyLimit { , KeyLimit } "
+#       " KeyLimit{ , KeyLimit } "
 #
 #   WeakKeyLimit:
 #       AlgorithmName Action Length
@@ -960,7 +960,7 @@ jdk.tls.keyLimits=AES/GCM/NoPadding KeyUpdate 2^37
 # a SecurityManager, otherwise it is disabled by default.
 #
 #   Policy:
-#       Constraint {"," Constraint }
+#       Constraint{"," Constraint }
 #   Constraint:
 #       AlgConstraint | MaxTransformsConstraint | MaxReferencesConstraint |
 #       ReferenceUriSchemeConstraint | KeySizeConstraint | OtherConstraint
@@ -971,7 +971,7 @@ jdk.tls.keyLimits=AES/GCM/NoPadding KeyUpdate 2^37
 #   MaxReferencesConstraint:
 #       "maxReferences" Integer
 #   ReferenceUriSchemeConstraint:
-#       "disallowReferenceUriSchemes" String { String }
+#       "disallowReferenceUriSchemes" String{ String }
 #   KeySizeConstraint:
 #       "minKeySize" KeyAlg Integer
 #   OtherConstraint:

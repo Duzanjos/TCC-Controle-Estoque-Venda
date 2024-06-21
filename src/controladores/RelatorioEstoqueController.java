@@ -54,17 +54,17 @@ public class RelatorioEstoqueController{
                 .filter(produto -> produto.getQuantidade() > 0 && produto.getDataValidade() != null && produto.getDataValidade().isBefore(LocalDate.now()))
                 .collect(Collectors.toList());
 
-        if (!produtosProximosDaValidade.isEmpty()) {
+        if (!produtosProximosDaValidade.isEmpty()){
             Platform.runLater(() -> showAlert(produtosProximosDaValidade, "Produtos próximos da data de validade"));
         }
 
-        if (!produtosVencidos.isEmpty()) {
+        if (!produtosVencidos.isEmpty()){
             Platform.runLater(() -> showAlert(produtosVencidos, "Produtos vencidos"));
         }
     }
     
-    private void showAlert(List<Produto> produtos, String title) {
-        try {
+    private void showAlert(List<Produto> produtos, String title){
+        try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/AvisoValidade.fxml"));
             Parent root = loader.load();
             AvisoValidadeController controller = loader.getController();
@@ -78,7 +78,7 @@ public class RelatorioEstoqueController{
             stage.setScene(new Scene(root));
             stage.setTitle(title);
             stage.showAndWait();
-        } catch (IOException e) {
+        } catch (IOException e){
             e.printStackTrace();
         }
     }

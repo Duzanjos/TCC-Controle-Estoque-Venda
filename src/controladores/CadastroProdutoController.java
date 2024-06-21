@@ -78,6 +78,10 @@ public class CadastroProdutoController{
             showAlert(Alert.AlertType.ERROR, "Erro ao deletar", "Produto não encontrado.");
             return;
         }
+        if (Database.isProductUsedInSales(codigoBarras)) {
+            showAlert(Alert.AlertType.ERROR, "Erro ao deletar", "Produto já foi utilizado em vendas e não pode ser deletado.");
+            return;
+        }
         Database.deleteProduct(codigoBarras);
         showAlert(Alert.AlertType.INFORMATION, "Sucesso", "Produto deletado com sucesso!");
     }

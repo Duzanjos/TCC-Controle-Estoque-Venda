@@ -183,6 +183,10 @@ public class Database{
             System.out.println("Produto não encontrado.");
             return;
         }
+        if (isProductUsedInSales(codigoBarras)){
+            System.out.println("Produto já foi utilizado em vendas e não pode ser deletado.");
+            return;
+        }
         String sql = "DELETE FROM Produto WHERE codigoBarras = ?";
         try (Connection conn = connect(); PreparedStatement pstmt = conn.prepareStatement(sql)){
             pstmt.setString(1, codigoBarras);
@@ -244,4 +248,18 @@ public class Database{
         }
         return vendas;
     }
+    public static boolean isProductUsedInSales(String codigoBarras){
+        String sql = "SELECT COUNT(*) FROM Venda WHERE produto_codigoBarras = ?";
+        try (Connection conn = connect(); PreparedStatement pstmt = conn.prepareStatement(sql)){
+            pstmt.setString(1, codigoBarras);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()){
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+
 }
