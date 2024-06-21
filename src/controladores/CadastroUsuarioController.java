@@ -1,6 +1,8 @@
 package controladores;
 
 import definicoes.Database;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -27,6 +29,24 @@ public class CadastroUsuarioController implements Initializable{
     @FXML
     private Button deletarUsuarioButton;
     @FXML
+    private Button cadastrarUsuarioButton;
+    @Override
+    public void initialize(URL location, ResourceBundle resources){
+        tipoUsuarioChoiceBox.getItems().addAll("Admin", "Funcionario");
+
+        cadastroLoginField.textProperty().addListener(new ChangeListener<String>(){
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue){
+                if (Database.userExists(newValue)){
+                    showAlert("Erro de Cadastro", "Esse login já existe, por gentileza, utilizar outro login.");
+                    cadastrarUsuarioButton.setDisable(true);
+                } else{
+                    cadastrarUsuarioButton.setDisable(false);
+                }
+            }
+        });
+    }
+    @FXML
     void getTipoUsuario(){
         tipoUsuarioChoiceBox.getSelectionModel().getSelectedItem();
     }
@@ -46,6 +66,7 @@ public class CadastroUsuarioController implements Initializable{
         }
         Database.insertUser(login, senha, tipoUsuario);
         showAlert("Sucesso", "Usuário cadastrado com sucesso!");
+        limparCampos();
     }
     @FXML
     void handleCancelarButtonAction(){
@@ -54,10 +75,7 @@ public class CadastroUsuarioController implements Initializable{
     }
     @FXML
     void handleLimparButtonAction(){
-        cadastroLoginField.clear();
-        cadastroPasswordField.clear();
-        cadastroPassword2Field.clear();
-        tipoUsuarioChoiceBox.getSelectionModel().clearSelection();
+        limparCampos();
     }
     @FXML
     void handleDeletarUsuarioButtonAction(){
@@ -77,11 +95,12 @@ public class CadastroUsuarioController implements Initializable{
         Database.deleteUser(login);
         showAlert("Sucesso", "Usuário deletado com sucesso!");
     }
-    @Override
-    public void initialize(URL location, ResourceBundle resources){
-        tipoUsuarioChoiceBox.getItems().addAll("Admin", "Funcionario");
+    private void limparCampos(){
+        cadastroLoginField.clear();
+        cadastroPasswordField.clear();
+        cadastroPassword2Field.clear();
+        tipoUsuarioChoiceBox.getSelectionModel().clearSelection();
     }
-
     private void showAlert(String title, String message){
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle(title);
