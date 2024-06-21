@@ -14,7 +14,7 @@
             <children>
                 <StackPane>
                     <children>
-                        <Label text="Produtos próximos da data de validade" textFill="WHITE">
+                        <Label fx:id="labelTitle" text="Aviso" textFill="WHITE">
                             <font>
                                 <Font name="Tahoma Bold" size="16.0" />
                             </font>

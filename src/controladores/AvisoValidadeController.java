@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Label;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,6 +23,8 @@ public class AvisoValidadeController{
     @FXML
     private TableColumn<Produto, String> loteColumn;
     @FXML
+    private Label labelTitle;
+    @FXML
     public void initialize(){
         codigoBarrasColumn.setCellValueFactory(new PropertyValueFactory<>("codigoBarras"));
         nomeColumn.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -34,5 +37,8 @@ public class AvisoValidadeController{
     
     public void setProdutos(List<Produto> produtos){
         this.produtos.setAll(produtos);
+    }
+    public void setTitle(String title){
+        this.labelTitle.setText(title);
     }
 }

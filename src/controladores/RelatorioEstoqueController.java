@@ -47,29 +47,43 @@ public class RelatorioEstoqueController{
         ObservableList<Produto> produtos = gestaoCadastroProduto.consultarProdutos();
         tableView.setItems(produtos);
         List<Produto> produtosProximosDaValidade = produtos.stream()
-                .filter(produto -> produto.getDataValidade().isBefore(LocalDate.now().plusDays(30)))
+                .filter(produto -> produto.getDataValidade() != null && produto.getDataValidade().isAfter(LocalDate.now()) && produto.getDataValidade().isBefore(LocalDate.now().plusDays(30)))
                 .collect(Collectors.toList());
         
-        if (!produtosProximosDaValidade.isEmpty()){
-            Platform.runLater(() ->{
-                try{
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/AvisoValidade.fxml"));
-                    Parent root = loader.load();
-                    AvisoValidadeController controller = loader.getController();
-                    controller.setProdutos(produtosProximosDaValidade);
-                    
-                    Stage stage = new Stage();
-                    stage.initModality(Modality.WINDOW_MODAL);
-                    stage.initOwner(tableView.getScene().getWindow());
-                    
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Aviso de Validade");
-                    stage.showAndWait();
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
-            });
+        List<Produto> produtosVencidos = produtos.stream()
+                .filter(produto -> produto.getDataValidade() != null && produto.getDataValidade().isBefore(LocalDate.now()))
+                .collect(Collectors.toList());
+
+        if (!produtosProximosDaValidade.isEmpty()) {
+            Platform.runLater(() -> showAlert(produtosProximosDaValidade, "Produtos próximos da data de validade"));
+        }
+
+        if (!produtosVencidos.isEmpty()) {
+            Platform.runLater(() -> showAlert(produtosVencidos, "Produtos vencidos"));
         }
     }
+    
+    private void showAlert(List<Produto> produtos, String title) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/resources/telas/AvisoValidade.fxml"));
+            Parent root = loader.load();
+            AvisoValidadeController controller = loader.getController();
+            controller.setProdutos(produtos);
+            controller.setTitle(title);
+
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(tableView.getScene().getWindow());
+
+            stage.setScene(new Scene(root));
+            stage.setTitle(title);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     private final GestaoCadastroProduto gestaoCadastroProduto = new GestaoCadastroProduto();
+    
+    
 }
