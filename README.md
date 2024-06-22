@@ -1,6 +1,10 @@
 # TCC Controle de Estoque Simples e Venda
 ## Sistema simples de controle de estoque e vendas...
 
+### Dados para primeiro acesso ao sistema:
+- **Login:** Admin
+- **Senha:** Admin
+
 ### A seguir algumas coisas ja programas para melhorias:
 
 Planejamento para versão: **v0.1.0.3**
