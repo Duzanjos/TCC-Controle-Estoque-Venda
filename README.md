@@ -4,6 +4,7 @@
 ### A seguir algumas coisas ja programas para melhorias:
 
 Planejamento para versão: **v0.1.0.3**
+* Alterar formato da data para ***dd/mm/yyyy***
 * Edição de produtos.
 * Edição de usuários.
 
