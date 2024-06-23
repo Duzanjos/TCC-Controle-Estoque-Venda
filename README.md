@@ -18,8 +18,11 @@ Planejamento para versão: **v0.1.0.4**
 * Integração com banco de dados central (Seria um servidor online, onde todas as informações sejam direcionadas para ele) Não sei como fazer ainda.
   
 ---
-Planejamento próximo ano talvez:
+Planejamento próximo ano talvez??
 * Versão para celular com conexão ao banco em nuvem.
+* Integrar sistemas de pagamento online.
+* Desenvolvimento de uma versão web para acesso remoto.
+* Planejo adicionar funcionalidades avançadas de análise de dados e previsão de demanda.
 
 ---
 Achou algum bug?
