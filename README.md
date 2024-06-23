@@ -11,7 +11,12 @@ Planejamento para versão: **v0.1.0.3**
 * Alterar formato da data para ***dd/mm/yyyy***
 * Edição de produtos.
 * Edição de usuários.
+* Relatório com a venda de todos os usuários e não só quem está logado.
 
+
+Planejamento para versão: **v0.1.0.4**
+* Integração com banco de dados central (Seria um servidor online, onde todas as informações sejam direcionadas para ele) Não sei como fazer ainda.
+  
 ---
 Planejamento próximo ano talvez:
 * Versão para celular com conexão ao banco em nuvem.
