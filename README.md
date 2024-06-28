@@ -13,6 +13,8 @@ Planejamento para versão: **v0.1.0.3**
 * Edição de usuários.
 * Relatório com a venda de todos os usuários e não só quem está logado.
 
+Bugs conhecidos para corrigir na **v0.1.0.3**:
+* Bloqueio de Exclusão de Produtos Utilizados em Compras. (foi resolvido na versão anterior, porém voltou a acontecer)
 
 Planejamento para versão: **v0.1.0.4**
 * Integração com banco de dados central (Seria um servidor online, onde todas as informações sejam direcionadas para ele) Não sei como fazer ainda.
